@@ -1,0 +1,188 @@
+$-ifm-primary-color: #40a9ff;
+
+.button {
+  line-height: 1.5715;
+  margin: 0 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: tada 1s alternate;
+  padding: 6px 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  &:active {
+    animation: none;
+  }
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* 按钮默认样式 */
+.button-default-outlined {
+  color: #000000d9;
+  border-color: #d9d9d9;
+  background: #fff;
+  &:hover {
+    color: $-ifm-primary-color;
+    border-color: $-ifm-primary-color;
+  }
+}
+.button-default-container {
+  color: #000000d9;
+  border-color: #949292;
+  background: #f0f0f0;
+  &:hover {
+    color: $-ifm-primary-color;
+    border-color: $-ifm-primary-color;
+  }
+}
+
+/* 按钮主样式 */
+.button-primary-outlined {
+  color: $-ifm-primary-color;
+  border-color: $-ifm-primary-color;
+  // background: #40a9ff;
+  &:hover {
+    color: $-ifm-primary-color;
+    border-color: #0095ff;
+    background: #edf7ff;
+  }
+}
+.button-primary-container {
+  color: #fff;
+  border-color: $-ifm-primary-color;
+  background: $-ifm-primary-color;
+  &:hover {
+    border-color: #69c0ff;
+    background: #69c0ff;
+  }
+}
+
+/* secondary样式 */
+.button-secondary-container {
+  color: #fff;
+  border-color: #f36d2e;
+  background: #ff8640f3;
+  &:hover {
+    color: #fff;
+    border-color: #fd3300;
+    background: #f36d2e;
+  }
+}
+.button-secondary-outlined {
+  color: #ff9456;
+  border-color: #ff9456;
+  // background: #ff8640f3;
+  &:hover {
+    color: #fa813b;
+    border-color: #fd3300;
+    background: #fff6eff3;
+  }
+}
+.button-success-outlined {
+  color: #2d9c00;
+  border-color: #2d9c00;
+  // background: #ff8640f3;
+  &:hover {
+    color: #237c00;
+    border-color: #2d9b01d7;
+    background: #ebfae5;
+  }
+}
+.button-success-container {
+  color: #fff;
+  border-color: #2d9c00;
+  background: #2d9c00;
+  &:hover {
+    color: #fff;
+    border-color: #31ad00;
+    background: #31ad00;
+  }
+}
+.button-error-outlined {
+  color: rgb(175, 0, 0);
+  border-color: rgb(175, 0, 0);
+  // background: #fff;
+  &:hover {
+    color: rgba(187, 0, 0, 0.76);
+    border-color: #ff0000;
+    background: rgb(252, 229, 229);
+  }
+}
+.button-error-container {
+  color: #fff;
+  border-color: rgb(175, 0, 0);
+  background: rgb(175, 0, 0);
+  &:hover {
+    color: #fff;
+    border-color: rgb(223, 0, 0);
+    background: rgb(158, 19, 19);
+  }
+}
+
+.button {
+  &-small {
+    font-size: 14px;
+    padding: 1px 10px;
+  }
+}
+.button {
+  &-large {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}
+
+.button-circle {
+  padding: 0;
+  min-width: 46px;
+  min-height: 46px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  word-break: break-all;
+}
+
+.button-disabled-true {
+  color: #47474783;
+  border-color: #e5e5e5;
+  background: #e5e5e5;
+
+  pointer-events: none;
+  &:hover {
+    cursor: not-allowed;
+    color: #47474783;
+    border-color: #e5e5e5;
+    background: #e5e5e5;
+  }
+}
