@@ -19,12 +19,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "storybook",
+    "build": "build-storybook",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 3000 -s public",
-    "build-storybook": "build-storybook -o docs-story"
+    "build-storybook": "build-storybook -o .docs-story"
   },
   "eslintConfig": {
     "extends": [
