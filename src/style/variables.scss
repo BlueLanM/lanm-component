@@ -1,0 +1,52 @@
+$white: #fff;
+$dark: #000;
+
+/* font-weight */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+/* font-size */
+$font-size-normal: 1rem;
+$font-size-large: 1.5rem;
+$font-size-small: 0.5rem;
+
+/* border */
+$border-width: 1px;
+
+/* default */
+$-btn-default-border: #949292;
+$-btn-default-bgc: #f0f0f0;
+
+/* primary */
+$-btn-primary-color: #40a9ff;
+$-btn-primary-outlined-border: #0095ff;
+$-btn-primary-outlined-bgc: #edf7ff;
+$-btn-primary-container: #69c0ff;
+
+/* secondary */
+$-btn-secondary-container-border: #f36d2e;
+$-btn-secondary-container-bgc: #ff8640f3;
+$-btn-secondary-hover-border: #fd3300;
+$-btn-secondary-outlined: #ff9456;
+$-btn-secondary-outlined-hover-color: #fa813b;
+$-btn-secondary-outlined-hover-bgc: #fff6eff3;
+
+/* primary */
+$-btn-success-color: #2d9c00;
+$-btn-success-outlined-color: #237c00;
+$-btn-success-outlined-boder: #2d9b01d7;
+$-btn-success-outlined-bgc: #ebfae5;
+$-btn-success-container: #31ad00;
+
+/* error */
+$-btn-error-color: #af0000;
+$-btn-error-outlined-color: #980a0d;
+$-btn-error-outlined-border: #ff0000;
+$-btn-error-outlined-bgc: #fce5e5;
+$-btn-error-container-border: #df0000;
+$-btn-error-container-bgc: #9e1313;
+
+/* disabled */
+$-btn-disabled-color: #47474783;
+$-btn-disabled-border: #e5e5e5;
