@@ -21,7 +21,6 @@ export interface ButtonProps
   disabled?: boolean;
   anime?: boolean;
   shape?: ButtonShape;
-  onClick?: () => void;
 }
 
 const prefixCls = "LanM-btn";
@@ -37,16 +36,8 @@ export default class Button extends Component<ButtonProps> {
   };
 
   render() {
-    const {
-      type,
-      onClick,
-      variant,
-      size,
-      disabled,
-      shape,
-      anime,
-      ...restprops
-    } = this.props;
+    const { type, variant, size, disabled, shape, anime, ...restprops } =
+      this.props;
     const btnClassName = classnames(prefixCls, {
       button: true,
       [`button-${type}-${variant}`]: true,
@@ -56,7 +47,7 @@ export default class Button extends Component<ButtonProps> {
       [`button-${size}-${shape}`]: true,
     });
     return (
-      <button className={btnClassName} onClick={onClick} {...restprops}>
+      <button className={btnClassName} {...restprops}>
         {this.props.children}
       </button>
     );

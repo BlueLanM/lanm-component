@@ -109,6 +109,76 @@ const Button = (args: ButtonProps) => {
             </div>
           </section>
         </div>
+        <div className="item">
+          <section>
+            <div className="title">不可用状态</div>
+            <div className="content">
+              <div className="code_content">
+                <BaseButton type="primary" disabled>
+                  primary
+                </BaseButton>
+                <BaseButton type="success" variant="outlined" disabled>
+                  success
+                </BaseButton>
+              </div>
+              <div className="description">
+                <div className="code_title">按钮状态</div>
+                添加 disabled 属性即可让按钮处于不可用状态。
+              </div>
+            </div>
+          </section>
+        </div>
+        <div className="item">
+          <section>
+            <div className="title">动画添加</div>
+            <div className="content">
+              <div className="code_content">
+                <BaseButton type="primary" anime>
+                  primary
+                </BaseButton>
+                <BaseButton type="secondary" anime>
+                  secondary
+                </BaseButton>
+                <BaseButton type="success" anime>
+                  primary
+                </BaseButton>
+                <BaseButton type="error" anime>
+                  error
+                </BaseButton>
+              </div>
+              <div className="description">
+                <div className="code_title">按钮动画</div>
+                添加anime属性可以给按钮加上有趣的动效。
+              </div>
+            </div>
+          </section>
+        </div>
+        <div className="item">
+          <section>
+            <div className="title">形状</div>
+            <div className="content">
+              <div className="code_content">
+                <BaseButton type="primary" shape="square">
+                  A
+                </BaseButton>
+                <BaseButton type="success" size="small" shape="circle">
+                  B
+                </BaseButton>
+                <BaseButton type="secondary" size="normal" shape="circle">
+                  C
+                </BaseButton>
+
+                <BaseButton type="error" size="large" shape="circle">
+                  error
+                </BaseButton>
+              </div>
+              <div className="description">
+                <div className="code_title">按钮形状</div>
+                shape属性对应两个形状，circle 和 square，默认为square
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </>
   );
@@ -123,6 +193,10 @@ export default {
     disabled: { options: [true, false], control: { type: "inline-radio" } },
     variant: { control: { type: "inline-radio" } },
     shape: { control: { type: "inline-radio" } },
+    size: {
+      options: ["small", "normal", "large"],
+      control: { type: "select" },
+    },
     onClick: { action: "clicked" },
   },
 
