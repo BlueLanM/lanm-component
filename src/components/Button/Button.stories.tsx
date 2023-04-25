@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "../../style/every.scss";
 import ButtonDoc from "./Button-doc.mdx";
-import BaseButton, { ButtonProps } from "./index";
+import BaseButton, { ButtonProps } from "./Button";
 
 const Button = (args: ButtonProps) => {
   const [size, setSize] = useState("normal");
@@ -213,7 +213,7 @@ export default {
 } as ComponentMeta<typeof BaseButton>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof BaseButton> = (args) => (
+const Template: ComponentStory<typeof BaseButton> = (args: any) => (
   <Button {...args} />
 );
 

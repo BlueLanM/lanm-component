@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import iconsCache from "./shared/res";
 import copy from "copy-to-clipboard";
 import IconDoc from "./Icon-doc.mdx";
-import BaseIcon, { IconProps } from "./index";
+import BaseIcon, { IconProps } from "./Icon";
 
 const buildIcons = (props: IconProps, icons: any) => {
   const { theme } = props;
