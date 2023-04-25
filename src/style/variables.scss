@@ -1,5 +1,41 @@
 $white: #fff;
 $dark: #000;
+$gray-100: #d4d4d4;
+$gray-900: #585858;
+
+$blue: #40a9ff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e6177e !default;
+$red: #ff0000 !default;
+$orange: #f36d2e !default;
+$yellow: #ceb515 !default;
+$green: #49e20c !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$t01: #40a9ff !default; // 默认主题色-图形，图标，背景
+
+$primary: $t01 !default;
+$secondary: $orange !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+$transparent: transparent !default;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "ghost": $transparent,
+);
 
 /* font-weight */
 $font-weight-light: 300;

@@ -15,10 +15,6 @@ type ButtonShape = "circle" | "square";
 export interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLElement>, "type" | "disabled"> {
   /**
-   * 设置按钮额外的样式
-   */
-  className?: string;
-  /**
    * 设置按钮的类型
    */
   type?: ButtonType;

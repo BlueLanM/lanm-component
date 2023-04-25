@@ -1,0 +1,39 @@
+@import "../../style/variables";
+
+@each $key, $val in $theme-colors {
+  .icon-#{$key} {
+    color: $val;
+  }
+}
+
+.LanM-icon {
+  // cursor: pointer;
+  &-loading {
+    animation: loading 1s linear infinite;
+  }
+}
+
+.svgCls {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 1 19%;
+  //   min-width: 120;
+  padding: 0px 7.5px 20px;
+  cursor: pointer;
+  svg {
+    margin-right: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

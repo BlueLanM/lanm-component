@@ -1,5 +1,8 @@
 import { configure, addDecorator } from "@storybook/react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
+library.add(fas);
 const wrapperStyle = {
   // width: '900px',
   padding: "0px 40px",

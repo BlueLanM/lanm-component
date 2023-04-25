@@ -1,0 +1,24 @@
+<!-- Icon Doc -->
+
+## Icon 图标
+
+可以配置不用类型，直接使用的 Icon 图标
+
+import { Story, Meta, ArgsTable, Source } from "@storybook/addon-docs/blocks";
+import { Icon } from "./Icon";
+import dedent from "ts-dedent";
+<Meta title="Components/Icon" component={Icon} />;
+
+### Code
+
+<Source
+  language="jsx"
+  code={dedent`
+      <Icon theme={theme} icon={iconName}/>`}
+/>
+
+### 参数
+
+<ArgsTable of={Icon} />
+
+export const Template = (args) => <Icon {...args} />;
