@@ -1,6 +1,8 @@
 import React, { Component, ButtonHTMLAttributes } from "react";
 import "./Button.scss";
 import classnames from "classnames";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import Icon, { ThemeProps } from "../Icon/Icon";
 export type ButtonType =
   | "default"
   | "primary"
@@ -39,6 +41,18 @@ export interface ButtonProps
    */
   anime?: boolean;
   /**
+   * 添加图标到标题后
+   */
+  icon?: IconProp;
+  /**
+   * 图标主题
+   */
+  theme?: ThemeProps;
+  /**
+   * 加载状态
+   */
+  loading?: boolean;
+  /**
    * 设置按钮形状
    */
   shape?: ButtonShape;
@@ -57,18 +71,34 @@ export default class Button extends Component<ButtonProps> {
   };
 
   render() {
-    const { type, variant, size, disabled, shape, anime, ...restprops } =
-      this.props;
+    const {
+      type,
+      variant,
+      size,
+      disabled,
+      shape,
+      anime,
+      loading,
+      icon,
+      theme,
+      ...restprops
+    } = this.props;
     const btnClassName = classnames(prefixCls, {
-      button: true,
-      [`button-${type}-${variant}`]: true,
-      [`button-${size}`]: true,
-      [`button-disabled-${disabled}`]: true,
-      [`button-anime-${anime}`]: true,
-      [`button-${size}-${shape}`]: true,
+      // button: true,
+      [`${prefixCls}-${type}-${variant}`]: true,
+      [`${prefixCls}-${size}`]: true,
+      [`${prefixCls}-disabled-${disabled}`]: true,
+      [`${prefixCls}-anime-${anime}`]: true,
+      [`${prefixCls}-loading`]: loading,
+      [`${prefixCls}-${size}-${shape}`]: true,
     });
     return (
       <button className={btnClassName} {...restprops}>
+        {loading ? (
+          <Icon icon="spinner" theme={theme} style={{ marginRight: 5 }} />
+        ) : icon ? (
+          <Icon icon={icon} theme={theme} style={{ marginRight: 5 }} />
+        ) : null}
         {this.props.children}
       </button>
     );

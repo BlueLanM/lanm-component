@@ -6,6 +6,7 @@ import BaseButton, { ButtonProps } from "./Button";
 
 const Button = (args: ButtonProps) => {
   const [size, setSize] = useState("normal");
+  const [loading, setLoading] = useState(false);
   return (
     <>
       <div className="example">
@@ -120,6 +121,12 @@ const Button = (args: ButtonProps) => {
                 <BaseButton type="success" variant="outlined" disabled>
                   success
                 </BaseButton>
+                <BaseButton type="error" variant="outlined" disabled>
+                  error
+                </BaseButton>
+                <BaseButton type="success" disabled>
+                  success
+                </BaseButton>
               </div>
               <div className="description">
                 <div className="code_title">按钮状态</div>
@@ -179,6 +186,84 @@ const Button = (args: ButtonProps) => {
             </div>
           </section>
         </div>
+        <div className="item">
+          <section>
+            <div className="title">icon图标</div>
+            <div className="content">
+              <div className="code_content">
+                <BaseButton type="primary" icon="plus">
+                  plus
+                </BaseButton>
+                <BaseButton type="secondary" icon="download">
+                  Download
+                </BaseButton>
+                <BaseButton type="success" icon="check">
+                  check
+                </BaseButton>
+                <BaseButton type="error" icon="archive">
+                  Delete
+                </BaseButton>
+              </div>
+              <div className="description">
+                <div className="code_title">按钮图标</div>
+                icon
+              </div>
+            </div>
+          </section>
+        </div>
+        <div className="item">
+          <section>
+            <div className="title">加载状态</div>
+            <div className="content">
+              <div className="tab">
+                <BaseButton type="primary" loading>
+                  primary loading
+                </BaseButton>
+                <BaseButton type="secondary" loading>
+                  secondary loading
+                </BaseButton>
+                <BaseButton type="success" loading>
+                  success loading
+                </BaseButton>
+                <BaseButton type="error" loading>
+                  error loading
+                </BaseButton>
+              </div>
+              <div className="tab">
+                <BaseButton type="primary" variant="outlined" loading>
+                  primary loading
+                </BaseButton>
+                <BaseButton type="secondary" variant="outlined" loading>
+                  secondary loading
+                </BaseButton>
+                <BaseButton type="success" variant="outlined" loading>
+                  success loading
+                </BaseButton>
+                <BaseButton type="error" variant="outlined" loading>
+                  error loading
+                </BaseButton>
+              </div>
+              <div className="code_content">
+                <BaseButton
+                  type="primary"
+                  loading={loading}
+                  onClick={() => {
+                    setLoading(true);
+                    setTimeout(() => {
+                      setLoading(false);
+                    }, 1000);
+                  }}
+                >
+                  点一下我!
+                </BaseButton>
+              </div>
+              <div className="description">
+                <div className="code_title">按钮加载</div>
+                loading
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </>
   );
@@ -191,6 +276,7 @@ export default {
   argTypes: {
     anime: { options: [true, false], control: { type: "inline-radio" } },
     disabled: { options: [true, false], control: { type: "inline-radio" } },
+    loading: { options: [true, false], control: { type: "inline-radio" } },
     variant: { control: { type: "inline-radio" } },
     shape: { control: { type: "inline-radio" } },
     size: {
@@ -223,6 +309,7 @@ button.args = {
   type: "default",
   variant: "container",
   disabled: false,
+  loading: false,
   anime: true,
   size: "normal",
   children: "Button!",

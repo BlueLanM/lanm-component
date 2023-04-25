@@ -1,10 +1,10 @@
 @import "../../style/variables.scss";
 
-.button {
+.LanM-btn {
   line-height: 1.5715;
   // margin: 0 5px;
   position: relative;
-
+  color: #212529;
   align-items: center;
   font-weight: $font-weight-normal;
   white-space: nowrap;
@@ -22,19 +22,25 @@
 }
 
 /* 按钮默认样式 */
-.button-default-outlined {
+.LanM-btn-default-outlined {
   color: $dark;
   border-color: #d9d9d9;
   background: $white;
+  svg {
+    color: $dark;
+  }
   &:hover {
     color: $-btn-primary-color;
     border-color: $-btn-primary-color;
   }
 }
-.button-default-container {
+.LanM-btn-default-container {
   color: $dark;
   border-color: $-btn-default-border;
   background: $-btn-default-bgc;
+  svg {
+    color: $dark;
+  }
   &:hover {
     color: $-btn-primary-color;
     border-color: $-btn-primary-color;
@@ -42,9 +48,12 @@
 }
 
 /* 按钮主样式 */
-.button-primary-outlined {
+.LanM-btn-primary-outlined {
   color: $-btn-primary-color;
   border-color: $-btn-primary-color;
+  svg {
+    color: $-btn-primary-color;
+  }
   // background: #40a9ff;
   &:hover {
     color: $-btn-primary-color;
@@ -52,10 +61,13 @@
     background: $-btn-primary-outlined-bgc;
   }
 }
-.button-primary-container {
+.LanM-btn-primary-container {
   color: $white;
   border-color: $-btn-primary-color;
   background: $-btn-primary-color;
+  svg {
+    color: $white;
+  }
   &:hover {
     border-color: $-btn-primary-container;
     background: $-btn-primary-container;
@@ -63,60 +75,78 @@
 }
 
 /* secondary样式 */
-.button-secondary-container {
+.LanM-btn-secondary-container {
   color: $white;
   border-color: -btn-secondary-container-border;
   background: $-btn-secondary-container-bgc;
+  svg {
+    color: $white;
+  }
   &:hover {
     color: $white;
     border-color: $-btn-secondary-hover-border;
     background: -btn-secondary-container-border;
   }
 }
-.button-secondary-outlined {
+.LanM-btn-secondary-outlined {
   color: $-btn-secondary-outlined;
   border-color: $-btn-secondary-outlined;
   // background: #ff8640f3;
+  svg {
+    color: $-btn-secondary-outlined;
+  }
   &:hover {
     color: $-btn-secondary-outlined-hover-color;
     border-color: $-btn-secondary-hover-border;
     background: $-btn-secondary-outlined-hover-bgc;
   }
 }
-.button-success-outlined {
+.LanM-btn-success-outlined {
   color: $-btn-success-color;
   border-color: $-btn-success-color;
   // background: #ff8640f3;
+  svg {
+    color: $-btn-success-color;
+  }
   &:hover {
     color: $-btn-success-outlined-color;
     border-color: $-btn-success-outlined-boder;
     background: $-btn-success-outlined-bgc;
   }
 }
-.button-success-container {
+.LanM-btn-success-container {
   color: $white;
   border-color: $-btn-success-color;
   background: $-btn-success-color;
+  svg {
+    color: $white;
+  }
   &:hover {
     color: $white;
     border-color: $-btn-success-container;
     background: $-btn-success-container;
   }
 }
-.button-error-outlined {
+.LanM-btn-error-outlined {
   color: $-btn-error-color;
   border-color: $-btn-error-color;
   // background: $white;
+  svg {
+    color: $-btn-error-color;
+  }
   &:hover {
     color: $-btn-error-outlined-color;
     border-color: $-btn-error-outlined-border;
     background: $-btn-error-outlined-bgc;
   }
 }
-.button-error-container {
+.LanM-btn-error-container {
   color: $white;
   border-color: $-btn-error-color;
   background: $-btn-error-color;
+  svg {
+    color: $white;
+  }
   &:hover {
     color: $white;
     border-color: $-btn-error-container-border;
@@ -124,32 +154,32 @@
   }
 }
 
-.button-link-outlined {
+.LanM-btn-link-outlined {
   color: $-btn-primary-color;
   border: none;
   background: transparent;
 }
 
-.button-link-container {
+.LanM-btn-link-container {
   color: $-btn-primary-color;
   border: none;
   background: transparent;
 }
 
-.button {
+.LanM-btn {
   &-small {
     font-size: $font-size-small;
     padding: 1px 10px;
   }
 }
-.button {
+.LanM-btn {
   &-large {
     font-size: $font-size-large;
     padding: 10px 20px;
   }
 }
 
-.button-normal-circle {
+.LanM-btn-normal-circle {
   padding: 0;
   min-width: 46px;
   min-height: 46px;
@@ -162,7 +192,7 @@
   border-radius: 50%;
   word-break: break-all;
 }
-.button-small-circle {
+.LanM-btn-small-circle {
   padding: 0;
   min-width: 26px;
   min-height: 26px;
@@ -174,7 +204,7 @@
   border-radius: 50%;
   word-break: break-all;
 }
-.button-large-circle {
+.LanM-btn-large-circle {
   padding: 0;
   min-width: 66px;
   min-height: 66px;
@@ -186,11 +216,14 @@
   border-radius: 50%;
   word-break: break-all;
 }
+.LanM-btn-loading {
+  opacity: $btn-disabled-opacity;
+  user-select: none;
+  pointer-events: none;
+}
 
-.button-disabled-true {
-  color: $-btn-disabled-color;
-  border-color: $-btn-disabled-border;
-  background: $-btn-disabled-border;
+.LanM-btn-disabled-true {
+  opacity: $btn-disabled-opacity;
   pointer-events: none;
   &:hover {
     cursor: not-allowed;
@@ -199,7 +232,7 @@
     background: $-btn-disabled-border;
   }
 }
-.button-anime-true {
+.LanM-btn-anime-true {
   animation: tada 1s alternate;
 }
 

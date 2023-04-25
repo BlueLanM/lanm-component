@@ -20,7 +20,7 @@ const buildIcons = (props: IconProps, icons: any) => {
         }}
       >
         {Object.keys(iconsCache)
-          .splice(0, 256)
+          .splice(0, Object.keys(iconsCache).length)
           .map((key, index) => {
             const iconName = icons[key].iconName;
             const _length = iconName.split("-").length;
