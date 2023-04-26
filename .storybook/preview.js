@@ -44,3 +44,11 @@ const loaderFn = () => {
 };
 
 configure(loaderFn, module);
+
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?33f65032ec6668200f5287b616afbf25";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
