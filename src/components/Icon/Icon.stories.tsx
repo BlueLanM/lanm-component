@@ -10,7 +10,7 @@ const buildIcons = (props: IconProps, icons: any) => {
 
   return (
     <>
-      <h6> 一共支持 {Object.keys(iconsCache).slice(0, 256).length} 种图标 </h6>
+      <h6> 一共支持 {Object.keys(iconsCache).length} 种图标 </h6>
       <br />
       <ul
         style={{
